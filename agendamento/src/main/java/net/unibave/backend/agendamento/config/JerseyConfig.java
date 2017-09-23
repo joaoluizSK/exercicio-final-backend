@@ -6,6 +6,7 @@ import io.swagger.jaxrs.listing.ApiListingResource;
 import javax.ws.rs.ApplicationPath;
 
 import net.unibave.backend.agendamento.domain.local.LocalResourceImpl;
+import net.unibave.backend.agendamento.domain.pessoa.PessoaResourceImpl;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,7 @@ public class JerseyConfig extends ResourceConfig {
         register(WebApplicationExceptionMapper.class);
         register(ApiListingResource.class);
         register(LocalResourceImpl.class);
+        register(PessoaResourceImpl.class);
     }
 
     @Bean
