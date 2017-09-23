@@ -1,11 +1,10 @@
 package net.unibave.backend.agendamento.domain.agendamento;
 
 import lombok.*;
+import net.unibave.backend.agendamento.domain.agendamento.participacao.Participacao;
 import net.unibave.backend.agendamento.domain.local.Local;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package net.unibave.backend.agendamento.domain.agendamento;
+package net.unibave.backend.agendamento.domain.agendamento.participacao;
 
 import lombok.*;
 import net.unibave.backend.agendamento.domain.pessoa.Pessoa;

@@ -5,6 +5,7 @@ import io.swagger.jaxrs.listing.ApiListingResource;
 
 import javax.ws.rs.ApplicationPath;
 
+import net.unibave.backend.agendamento.domain.local.LocalResourceImpl;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +19,7 @@ public class JerseyConfig extends ResourceConfig {
         property(ServerProperties.BV_SEND_ERROR_IN_RESPONSE, true);
         register(WebApplicationExceptionMapper.class);
         register(ApiListingResource.class);
-        //register(Pessoa.class);
+        register(LocalResourceImpl.class);
     }
 
     @Bean
@@ -29,7 +30,7 @@ public class JerseyConfig extends ResourceConfig {
         swagger.setSchemes(new String[]{"http"});
         swagger.setHost("localhost:8080");
         swagger.setBasePath("/api");
-        swagger.setResourcePackage("com.example.unibave.rest.resource");
+        swagger.setResourcePackage("net.unibave.backend.agendamento.domain");
         swagger.setPrettyPrint(true);
         swagger.setScan(true);
         return swagger;
