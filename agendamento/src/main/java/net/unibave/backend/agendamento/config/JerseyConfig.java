@@ -5,6 +5,7 @@ import io.swagger.jaxrs.listing.ApiListingResource;
 
 import javax.ws.rs.ApplicationPath;
 
+import net.unibave.backend.agendamento.domain.agendamento.AgendamentoResourceImpl;
 import net.unibave.backend.agendamento.domain.local.LocalResourceImpl;
 import net.unibave.backend.agendamento.domain.pessoa.PessoaResourceImpl;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -22,6 +23,7 @@ public class JerseyConfig extends ResourceConfig {
         register(ApiListingResource.class);
         register(LocalResourceImpl.class);
         register(PessoaResourceImpl.class);
+        register(AgendamentoResourceImpl.class);
     }
 
     @Bean

@@ -32,7 +32,7 @@ public class Agendamento {
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Participacao> participacoes;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Local local;
 
     @Column(name = "observacoes", length = 100)

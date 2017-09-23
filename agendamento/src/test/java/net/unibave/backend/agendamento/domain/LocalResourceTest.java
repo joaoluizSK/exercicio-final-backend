@@ -45,8 +45,7 @@ public class LocalResourceTest {
         assertThat(localCriado.getNome()).isEqualTo(local.getNome());
         assertThat(localCriado.getCapacidade()).isEqualTo(local.getCapacidade());
 
-        restTemplate
-                .exchange(BASE_URI + "/" + localCriado.getId(), HttpMethod.DELETE, null, String.class);
+        restTemplate.exchange(BASE_URI + "/" + localCriado.getId(), HttpMethod.DELETE, null, String.class);
 
     }
 
